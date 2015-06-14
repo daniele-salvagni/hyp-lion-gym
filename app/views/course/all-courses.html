@@ -1,0 +1,49 @@
+<!-- =============================================================================================================== -->
+<!-- =============================================== Daniele Salvagni - Hypermedia Applications (Web and Multimedia) -->
+
+<div class="container">
+
+  <div class="row">
+
+
+    <div class="col-xs-12 voffset3 text-xs-center text-sm-left">
+      <h1>Our Courses <br/>
+        <small>{{ order }}</small>
+      </h1>
+    </div>
+
+    <div class="col-xs-12 voffset3">
+      <p>We have all kinds of courses for everyone at any level, taught by certified professionals.<br/>
+        If you need help finding the right course for you, you can ask our advisors and they will be happy to help
+        you in the process.</p>
+    </div>
+
+
+  </div>
+
+
+  <div class="row voffset4">
+
+    <div class="col-xs-12">
+
+      <table class="table table-hover"
+             data-ng-init="reverse=false; predicate='name'; order='Alphabetical Order (Click to change)'">
+        <thead>
+        <tr>
+          <th><a href="" ng-click="predicate = 'name'; reverse=!reverse; order='Alphabetical Order'">Course Name</a></th>
+          <th><a href="" ng-click="predicate = 'category'; reverse=!reverse; order='Category Order'">Category</a></th>
+          <th><a href="" ng-click="predicate = 'level'; reverse=!reverse; order='Level Order'">Level</a></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-ng-repeat="course in courses | orderBy:predicate:reverse">
+          <td><a href="#/course/{{course.url}}">{{ course.name }}</a></td>
+          <td>{{ course.category }}</td>
+          <td><span class="label label-{{course.level}}">&nbsp;</span></td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>

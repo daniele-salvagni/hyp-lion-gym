@@ -1,0 +1,125 @@
+<!-- =============================================================================================================== -->
+<!-- =============================================== Daniele Salvagni - Hypermedia Applications (Web and Multimedia) -->
+
+<div class="container">
+
+  <!-- TITLE HEAD -->
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="page-header text-xs-center text-sm-left">
+        <h1>{{ instructorData.name }} <br/>
+          <small>Instructor</small>
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <!-- SIDEBAR -->
+    <div id="instructor-sidebar" class="col-sm-4">
+
+      <!-- Profile Photo -->
+      <img class="img-responsive" src="{{ instructorData.thumb }}" alt="{{ instructorData.name }}">
+      <br/>
+
+      <!-- Courses -->
+      <div class="panel">
+        <div class="list-group">
+          <span class="list-group-item active" style="color: #fff;">Courses by this instructor</span>
+          <a href="#/course/{{ course.url }}" class="list-group-item" data-ng-repeat="course in instructorData.courses">
+            {{ course.name }}
+          </a>
+        </div>
+      </div>
+
+      <!-- Twitter Feed -->
+      <div class="twt-wrapper" data-ng-show="instructorData.twitter != ''">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            Twitter Feed
+          </div>
+          <div class="panel-body">
+            <ul class="media-list">
+              <li class="media" data-ng-repeat="tweet in instructorData.tweets">
+                <a href="https://twitter.com/{{ tweet.user.screen_name }}" class="pull-left">
+                  <img src="{{ tweet.user.profile_image_url }}" alt="" class="img-circle">
+                </a>
+
+                <div class="media-body">
+                    <span class="text-muted pull-right">
+                      <small class="text-muted">30 min ago</small>
+                    </span>
+                  <strong class="text-success">@ {{ tweet.user.screen_name }}</strong>
+
+                  <p>
+                    {{ tweet.text }}.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <span class="text-danger">{{ instructorData.tweets[0].user.followers_count }} followers</span>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- CONTENT COLUMN -->
+    <div class="col-sm-8">
+
+      <!-- Biography -->
+      <h2>Biography</h2>
+
+      <div data-ng-bind-html="instructorData.bio | renderHTML"></div>
+      <br/>
+
+
+      <!-- Instructor Photos (carousel) -->
+      <h2>Photos</h2>
+
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li class="" data-target="#carousel-example-generic" data-ng-repeat="photo in instructorData.photos"
+              data-slide-to="{{$index}}" data-ng-class='{active:$first}'></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item" data-ng-repeat="photo in instructorData.photos" data-ng-class='{active:$first}'>
+            <img data-ng-src="{{ photo }}" alt="{{ courseData.name }}">
+          </div>
+        </div>
+        <!-- Controls -->
+          <span class="left carousel-control" data-target="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </span>
+          <span class="right carousel-control" data-target="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </span>
+      </div>
+      <br/>
+
+      <!-- Qualifications -->
+      <h2>Professional Qualifications</h2>
+
+      <div data-ng-bind-html="instructorData.qualifications | renderHTML"></div>
+      <br/>
+
+      <!-- Awards -->
+      <div data-ng-show="instructorData.awards">
+        <h2>Awards</h2><br/>
+
+        <div class="col-xs-4" data-ng-repeat="award in instructorData.awards">
+          <img src="{{ award.img }}" class="img-responsive center-block" alt="Award">
+          <br/><span class="text-center center-block">{{ award.name }}</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

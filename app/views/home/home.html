@@ -1,0 +1,154 @@
+<!-- =============================================================================================================== -->
+<!-- =============================================== Daniele Salvagni - Hypermedia Applications (Web and Multimedia) -->
+
+<style>
+
+  .success {
+    color: #44a95a;
+  }
+
+  .overlay {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-image: url('http://www.transparenttextures.com/patterns/subtle-dots.png');
+  }
+
+  .overlay-small {
+    color: #fff;
+    background-image: url('http://www.transparenttextures.com/patterns/subtle-dots.png');
+  }
+
+</style>
+
+
+<div id="yt-container" class="container-fluid hidden-xs"
+     style="padding: 0; position: relative; left: 0; overflow: hidden; height: 400px">
+  <iframe id="yt-frame" frameborder="0" width="854" height="478"
+          src="http://www.youtube.com/embed/-zbgLkzIAsU?modestbranding=1&amp;rel=0&amp;controls=0&amp;disablekb=1&amp;loop=1&amp;autoplay=1&amp;playlist=-zbgLkzIAsU&amp;showinfo=0&amp;theme=dark&amp;">
+  </iframe>
+
+  <div class="overlay text-center"
+       style="height: 100%; width: 100%; background-image: url('http://www.transparenttextures.com/patterns/subtle-dots.png'); ">
+    <div><h1 class="slogan">WORKOUTS THAT WORK.<br/>FIND THE RIGHT COURSE FOR YOU!</h1><br/>
+      <a class="squared-btn" href="#/course/all">SEE OUR COURSES</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid visible-xs" style="background: #999 url('img/bg.jpg') center;
+background-size: cover; padding: 35px; color: #fff;">
+
+  <div class="row">
+
+    <div class="col-xs-12">
+
+      <div class=" text-center">
+        <div><h3 class="slogan" style="line-height: normal">WORKOUTS THAT WORK.<br/>FIND THE RIGHT COURSE FOR YOU!</h3><br/>
+          <a class="squared-btn" style="margin-top: 5px;" href="#/course/all">SEE OUR COURSES</a>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-4 voffset5 text-xs-center text-sm-left">
+      <h4>We are the biggest gym in the city</h4>
+      <p>With 10 fully equipped rooms, 30 professional instructors and 50 active courses we are the biggest gym in the
+        city, so we can offer you the biggest offer possible while maintaining very low subscription fees.</p>
+      <p><a href="#/location">Vist our Gym</a></p>
+    </div>
+
+    <div class="col-md-4 voffset5 text-xs-center text-sm-left">
+      <h4>We have the best equipment</h4>
+      <p>Our rooms have some of the best kit available. At Lion Gym you’ll find at least hundreds of items of equipment
+        and free weights for you to use to your heart’s content. And best of all, our high-tech setups are super green:
+        70% of our machines use no electricity at all – they’re powered by you.</p>
+      <p><a href="">See our equipment</a></p>
+    </div>
+
+    <div class="col-md-4 voffset5 text-xs-center text-sm-left">
+      <h4>Our instructors are certified professionals</h4>
+      <p>Our Trainers at Lion Gym are highly qualified, competent professionals who are passionate about helping you
+        achieve your goals. All of our trainers maintain our standard of excellence by fulfilling our requirements and
+        participating in continuing education.</p>
+      <p><a href="#/instructor/all">Meet our instructors</a></p>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <div class="thumbnail center well well-small text-center">
+        <h2>Newsletter</h2>
+
+        <p>Subscribe to our weekly Newsletter and stay tuned.</p>
+
+        <form action="" method="post">
+          <div class="input-prepend"><span class="add-on"><i class="icon-envelope"></i></span>
+            <input type="text" id="" name="" placeholder="your@email.com">
+          </div>
+          <br />
+          <input type="submit" value="Subscribe Now!" class="btn btn-large" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<form class="form-inline">
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+      <div class="input-group-addon">.00</div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Transfer cash</button>
+</form>
+
+
+<script>
+  $(document).ready(function () {
+    // The youtube video
+    var $ytFrame = $('#yt-frame');
+    // The element that is fluid with
+    var $ytContainer = $('#yt-container');
+    // Save the hardcoded aspect ratio of the video
+    var aspectRatio = $ytFrame.height() / $ytFrame.width();
+    $ytFrame.removeAttr('height').removeAttr('width');
+    // When the window is resized
+    $(window).resize(function () {
+      var newWidth = $ytContainer.width();
+      $ytFrame.width(newWidth).height(newWidth * aspectRatio);
+    }).resize(); // Do one resize on page load
+  });
+</script>

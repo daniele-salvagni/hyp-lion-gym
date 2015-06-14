@@ -1,0 +1,36 @@
+<!-- =============================================================================================================== -->
+<!-- =============================================== Daniele Salvagni - Hypermedia Applications (Web and Multimedia) -->
+
+<div class="container">
+
+  <div class="row">
+
+
+    <div class="col-xs-12 voffset3 text-xs-center text-sm-left">
+      <h1>Our Instructors <br/>
+        <small>Alphabetical Order</small>
+      </h1>
+    </div>
+
+    <div class="col-xs-12 voffset3">
+      <p>Our Trainers at Lion Gym are highly qualified, competent professionals who are passionate about helping you
+        achieve your goals. All of our trainers maintain our standard of excellence by fulfilling our requirements and
+        participating in continuing education.</p>
+    </div>
+
+
+  </div>
+
+  <div class="row voffset4 row-centered">
+
+    <div class="col-md-2 col-sm-3 col-xs-5 col-centered voffset4" data-ng-repeat="instructor in instructors | orderBy:'name'">
+      <a href="#/instructor/{{ instructor.url }}"><img data-ng-src="{{ instructor.thumb }}" alt=""
+                                                       class=" img-responsive img-circle center-block"></a><br/>
+        <span class="text-center center-block">
+          <strong class="text-success">{{ instructor.name }}</strong><br/>Instructor
+        </span>
+    </div>
+
+  </div>
+
+</div>

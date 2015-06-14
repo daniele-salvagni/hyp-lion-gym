@@ -1,0 +1,368 @@
+// Daniele Salvagni - Hypermedia Applications (Web and Multimedia)
+
+// ================================================================================
+// COMMON =========================================================================
+// ================================================================================
+
+html {
+  height: 100%;
+  background-color: #E0E0E0;
+}
+
+// Logo ===========================================================================
+
+#logo {
+  position: relative;
+  width: 65px;
+  top: -23px;
+  @transition: height .14s ease;
+}
+
+.text-logo, .text-logo a, .text-logo a:link {
+  color: @brand-success;
+  font-weight: bold;
+}
+
+.navbar-inverse {
+  .text-logo, .text-logo a, .text-logo a:link {
+    color: @brand-primary;
+  }
+}
+
+// Top Bar ========================================================================
+
+.topbar {
+  padding-top: 8px;
+  color: #8e8e8e;
+  background-color: darken(@brand-primary, 10%);
+  font-size: 14px;
+  height: 38px;
+  position: relative;
+  top: -32px;
+}
+
+// Footer =========================================================================
+
+.footer {
+  min-height: 150px;
+  padding: 10px;
+  color: #A7A7A7;
+  background-color: #E0E0E0;
+  margin-top: 100px;
+}
+
+.footer-logo {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+// Nav Bar ========================================================================
+
+body {
+  // Add a padding to the body so the navbar does not overlap with the content
+  // This is the default value
+  padding-top: 35px;
+}
+
+// Nav bar default padding
+.navbar {
+  padding: 5px 0;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+// Nav bar on bigger screens (with collapsing)
+@media (min-width: @screen-sm-min) {
+
+  body {
+    // Biger padding for bigger screens (when navbar is not collapsed)
+    padding-top: 145px;
+  }
+
+  // On bigger screens we want a bigger navbar...
+  .navbar {
+    padding: 32px 0;
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+  }
+  // ...that can be collapsed (reduce the padding)
+  .top-nav-collapse {
+    padding: 15px 0;
+    background-color: #FFF;
+    color: #333;
+  }
+
+}
+
+// Bordered membership button
+.membership {
+  border: 2px solid #fff;
+
+  // Change color on hover
+  &:hover {
+    border-color: @brand-success;
+  }
+}
+
+.active .membership {
+
+  color: @brand-success;
+  border-color: @brand-success;
+
+}
+
+// Membership button for the inverse color
+.navbar-inverse .membership {
+  border-color: #333;
+}
+
+// Logo size when the navbar is collapsed
+.navbar-inverse #logo {
+  position: relative;
+  width: 47px;
+  top: -12px;
+}
+
+
+// Center carousel image in the middle if too small
+.item img {
+  margin: auto;
+}
+
+// ================================================================================
+// PAGE SPECIFIC ==================================================================
+// ================================================================================
+
+// Instructor Page ================================================================
+
+#instructor-sidebar {
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
+.twt-wrapper .panel-body {
+  max-height:650px;
+  overflow:auto;
+}
+.twt-wrapper .media-list .media img {
+  width:64px;
+  height:64px;
+  border:2px solid #e5e7e8;
+}
+.twt-wrapper .media-list .media {
+  border-bottom:1px dashed #efefef;
+  margin-bottom:25px;
+}
+
+// Course Page ====================================================================
+
+.course-header {
+  background-color: #999;
+  color: #fff;
+  height: 160px;
+}
+
+// All Courses Page ===============================================================
+
+.label-1 {
+  .label-variant(@label-success-bg);
+}
+
+.label-2 {
+  .label-variant(@label-warning-bg);
+}
+
+.label-3 {
+  .label-variant(@label-danger-bg);
+}
+
+.label-1::before {
+  content: "Basic";
+}
+
+.label-2::before {
+  content: "Medium";
+}
+
+.label-3::before {
+  content: "Advanced";
+}
+
+// Location Page ==================================================================
+
+.map-container {
+  padding: 0;
+  map {
+    height: 400px;
+  }
+}
+
+// Membership =====================================================================
+
+.price { font-size: 25px; float: left; }
+.pricing_header { background: none repeat scroll 0% 0% @brand-primary; border-radius: 5px 5px 0px 0px; transition: background 0.4s ease-out 0s; }
+.pricing_header h3 { text-align:center; line-height: 25px; padding: 15px 0px; margin: 0px; font-weight: 400; color: #fff; }
+.list-group-item:first-child { border-top-right-radius: 0px; border-top-left-radius: 0px; }
+.btn { float: right; font-weight:500;}
+.off { text-decoration: line-through; color: rgb(86,86,86); }
+.space {height: 2px; background-color: @gray-light;}
+
+// Home ===========================================================================
+
+.squared-btn {
+  margin-top: 20px;
+  border: 3px solid #fff;
+  padding: 12px 20px;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+
+  &:hover {
+    border-color: @brand-success;
+    color: @brand-success;
+    text-decoration: none;
+  }
+
+}
+
+
+.slogan {
+  line-height: 60px;
+  font-weight: bold
+}
+
+
+
+
+// ================================================================================
+// UTILITY ========================================================================
+// ================================================================================
+
+// Text Alignment =================================================================
+// Change text alignment based on the screen size, bootstrap can't do this, boooooo
+
+.text-xs-left {
+  text-align: left;
+}
+
+.text-xs-right {
+  text-align: right;
+}
+
+.text-xs-center {
+  text-align: center;
+}
+
+.text-xs-justify {
+  text-align: justify;
+}
+
+@media (min-width: @screen-sm-min) {
+  .text-sm-left {
+    text-align: left;
+  }
+
+  .text-sm-right {
+    text-align: right;
+  }
+
+  .text-sm-center {
+    text-align: center;
+  }
+
+  .text-sm-justify {
+    text-align: justify;
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .text-md-left {
+    text-align: left;
+  }
+
+  .text-md-right {
+    text-align: right;
+  }
+
+  .text-md-center {
+    text-align: center;
+  }
+
+  .text-md-justify {
+    text-align: justify;
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+  .text-lg-left {
+    text-align: left;
+  }
+
+  .text-lg-right {
+    text-align: right;
+  }
+
+  .text-lg-center {
+    text-align: center;
+  }
+
+  .text-lg-justify {
+    text-align: justify;
+  }
+}
+
+// Offsets ========================================================================
+// Vertical offsets, they could become handy
+
+.voffset {
+  margin-top: 2px;
+}
+
+.voffset1 {
+  margin-top: 5px;
+}
+
+.voffset2 {
+  margin-top: 10px;
+}
+
+.voffset3 {
+  margin-top: 15px;
+}
+
+.voffset4 {
+  margin-top: 30px;
+}
+
+.voffset5 {
+  margin-top: 40px;
+}
+
+.nomargin {
+  margin: 0;
+}
+
+.nopadding {
+  padding: 0;
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+
+/* centered columns styles */
+.row-centered {
+  text-align:center;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
+}

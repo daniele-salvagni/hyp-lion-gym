@@ -1,0 +1,122 @@
+<!-- =============================================================================================================== -->
+<!-- =============================================== Daniele Salvagni - Hypermedia Applications (Web and Multimedia) -->
+
+<!-- HEADER -->
+<div class="container-fluid course-header" style="
+    background: #999 url('{{ courseData.thumb }}') center;
+    background-size: cover;">
+  <!-- Inline CSS because the BG image is dynamic -->
+  <div class="container">
+    <div class="col-xs-12 voffset3 text-xs-center text-sm-left">
+      <h1>{{ courseData.name }} <br/>
+        <small>{{ courseData.category }}</small>
+      </h1>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+
+  <div class="row">
+
+    <!-- COURSE DESCRIPTION -->
+    <div class="col-xs-12">
+      <h2>Description</h2>
+
+      <div data-ng-bind-html="courseData.description | renderHTML"></div>
+      <br/>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <!-- COURSE PHOTOS (carousel) -->
+    <div class="col-sm-6">
+      <h2>Photos</h2>
+
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li class="" data-target="#carousel-example-generic" data-ng-repeat="photo in courseData.photos"
+              data-slide-to="{{$index}}" data-ng-class='{active:$first}'></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item" data-ng-repeat="photo in courseData.photos" data-ng-class='{active:$first}'>
+            <img data-ng-src="{{ photo }}" alt="{{ courseData.name }}">
+          </div>
+        </div>
+        <!-- Controls -->
+          <span class="left carousel-control" data-target="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </span>
+          <span class="right carousel-control" data-target="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </span>
+      </div>
+      <br/>
+    </div>
+
+    <!-- COURSE SCHEDULE -->
+    <div class="col-sm-6">
+      <h2>Schedule</h2>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Day</th>
+          <th>Start</th>
+          <th>Finish</th>
+          <th>Room</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-ng-repeat="day in courseData.schedule">
+          <td>{{ day.day }}</td>
+          <td>{{ day.start }}</td>
+          <td>{{ day.finish }}</td>
+          <td>{{ day.room }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <!-- COURSE TARGET -->
+    <div class="col-sm-6">
+      <h2>Target</h2>
+
+      <div data-ng-bind-html="courseData.target | renderHTML"></div>
+    </div>
+
+    <!-- COURSE BENEFITS -->
+    <div class="col-sm-6">
+      <h2>Benefits</h2>
+
+      <div data-ng-bind-html="courseData.benefits | renderHTML"></div>
+    </div>
+  </div>
+
+
+  <div class="row voffset4 row-centered">
+
+    <!-- COURSE STAFF -->
+    <div class="col-xs-12 text-center"><h2>Course Staff</h2></div>
+
+    <div class="col-md-2 col-sm-3 col-xs-5 col-centered voffset4" data-ng-repeat="instructor in courseData.staff">
+      <a href="#/instructor/{{ instructor.url }}"><img data-ng-src="{{ instructor.thumb }}" alt=""
+                                                       class=" img-responsive img-circle center-block"></a><br/>
+        <span class="text-center center-block">
+          <strong class="text-success">{{ instructor.name }}</strong><br/>Instructor
+        </span>
+    </div>
+
+  </div>
+
+</div>

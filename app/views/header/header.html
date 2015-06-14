@@ -1,0 +1,82 @@
+<!-- =============================================================================================================== -->
+<!-- =============================================== Daniele Salvagni - Hypermedia Applications (Web and Multimedia) -->
+
+<!-- ng-class="{active: isActive('/our-gym')} adds the 'active' class to the element if the condition after: is true -->
+
+<header class="header" data-ng-controller="HeaderController">
+
+  <!-- ~~~ NAVBAR ~~~ -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <!-- ~~~ Bar with social links and telephone ~~~~-->
+    <div class=" topbar hidden-xs">
+      <div class="container nopadding">
+        <!-- ~~~ Telephone ~~~ -->
+        <div class="col-sm-6 nopadding">
+          <span><i class="fa fa-phone"></i>&nbsp;&nbsp;(+39) 02 654321 - Call us for more informations</span>
+        </div>
+        <!-- ~~~ Font-Awesome styled icons (social.less) ~~~ -->
+        <div class="col-sm-6 nopadding">
+          <div class="social">
+            <ul>
+              <li><a href=""><i class="fa fa-lg fa-facebook"></i></a></li>
+              <li><a href=""><i class="fa fa-lg fa-twitter"></i></a></li>
+              <li><a href=""><i class="fa fa-lg fa-google-plus"></i></a></li>
+              <li><a href=""><i class="fa fa-lg fa-instagram"></i></a></li>
+              <li><a href=""><i class="fa fa-lg fa-foursquare"></i></a></li>
+              <li><a href=""><i class="fa fa-lg fa-rss"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ~~~ Navbar ~~~ -->
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <!-- ~~~ Toggle Icon ~~~ -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- ~~~ LOGO ~~~ -->
+        <a class="navbar-brand" href="#/">
+          <img id="logo" class="img-responsive hidden-xs" src="img/logo-green.png" alt="Lion Gym"/>
+          <span class="text-logo visible-xs-block">Lion Gym</span>
+        </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown" data-ng-class="{active: isActive('/our-gym')}">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Our
+              Gym <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a>Our Gym</a></li>
+              <li><a>Equipment</a></li>
+            </ul>
+          </li>
+          <li class="dropdown" data-ng-class="{active: isActive('/course')}">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Our
+              Courses <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Categories</a></li>
+              <li><a href="#/course/all">All Courses</a></li>
+            </ul>
+          </li>
+          <li data-ng-class="{active: isActive('/instructor')}"><a href="#/instructor/all">Our Crew <span
+                class="sr-only">(current)</span></a></li>
+          <li data-ng-class="{active: isActive('/schedule')}"><a>Schedule</a></li>
+          <li data-ng-class="{active: isActive('/location')}"><a href="#/location">Location</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li data-ng-class="{active: isActive('/membership')}"><a class="membership" href="#/membership">Membership</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
