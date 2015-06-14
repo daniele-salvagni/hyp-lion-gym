@@ -81,7 +81,8 @@ if ($course != "all") {
             $staffArray[] = array_map('utf8_encode', $row);
         }
 
-        $result->close();
+        $result->close();WORKOUTS THAT WORK.
+
 
         // Add the staffArray to the data to be returned with the 'schedule' key
         $data["staff"] = $staffArray;

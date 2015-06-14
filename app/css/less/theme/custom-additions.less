@@ -85,6 +85,7 @@ body {
     -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
     transition: background .5s ease-in-out, padding .5s ease-in-out;
   }
+
   // ...that can be collapsed (reduce the padding)
   .top-nav-collapse {
     padding: 15px 0;
@@ -123,7 +124,6 @@ body {
   top: -12px;
 }
 
-
 // Center carousel image in the middle if too small
 .item img {
   margin: auto;
@@ -141,17 +141,19 @@ body {
 }
 
 .twt-wrapper .panel-body {
-  max-height:650px;
-  overflow:auto;
+  max-height: 650px;
+  overflow: auto;
 }
+
 .twt-wrapper .media-list .media img {
-  width:64px;
-  height:64px;
-  border:2px solid #e5e7e8;
+  width: 64px;
+  height: 64px;
+  border: 2px solid #e5e7e8;
 }
+
 .twt-wrapper .media-list .media {
-  border-bottom:1px dashed #efefef;
-  margin-bottom:25px;
+  border-bottom: 1px dashed #efefef;
+  margin-bottom: 25px;
 }
 
 // Course Page ====================================================================
@@ -199,13 +201,45 @@ body {
 
 // Membership =====================================================================
 
-.price { font-size: 25px; float: left; }
-.pricing_header { background: none repeat scroll 0% 0% @brand-primary; border-radius: 5px 5px 0px 0px; transition: background 0.4s ease-out 0s; }
-.pricing_header h3 { text-align:center; line-height: 25px; padding: 15px 0px; margin: 0px; font-weight: 400; color: #fff; }
-.list-group-item:first-child { border-top-right-radius: 0px; border-top-left-radius: 0px; }
-.btn { float: right; font-weight:500;}
-.off { text-decoration: line-through; color: rgb(86,86,86); }
-.space {height: 2px; background-color: @gray-light;}
+.price {
+  font-size: 25px;
+  float: left;
+}
+
+.pricing_header {
+  background: none repeat scroll 0% 0% @brand-primary;
+  border-radius: 5px 5px 0px 0px;
+  transition: background 0.4s ease-out 0s;
+}
+
+.pricing_header h3 {
+  text-align: center;
+  line-height: 25px;
+  padding: 15px 0px;
+  margin: 0px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.list-group-item:first-child {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.btn {
+  float: right;
+  font-weight: 500;
+}
+
+.off {
+  text-decoration: line-through;
+  color: rgb(86, 86, 86);
+}
+
+.space {
+  height: 2px;
+  background-color: @gray-light;
+}
 
 // Home ===========================================================================
 
@@ -226,14 +260,35 @@ body {
 
 }
 
-
 .slogan {
   line-height: 60px;
   font-weight: bold
 }
 
+.success {
+  color: #44a95a;
+}
 
+.overlay {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-image: url('http://www.transparenttextures.com/patterns/subtle-dots.png');
+}
 
+.overlay-small {
+  color: #fff;
+  background: #999 url('../img/bg.jpg') center;
+  background-size: cover;
+  padding: 35px;
+}
 
 // ================================================================================
 // UTILITY ========================================================================
@@ -353,16 +408,16 @@ body {
   float: none;
 }
 
-
 /* centered columns styles */
 .row-centered {
-  text-align:center;
+  text-align: center;
 }
+
 .col-centered {
-  display:inline-block;
-  float:none;
+  display: inline-block;
+  float: none;
   /* reset the text-align */
-  text-align:left;
+  text-align: left;
   /* inline-block space fix */
-  margin-right:-4px;
+  margin-right: -4px;
 }

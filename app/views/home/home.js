@@ -16,11 +16,8 @@ angular.module('lionApp.home', ['ngRoute'])
 
     .controller('HomeController', [function() {
 
-
         $(window).resize(function(){
-            //alert(window.innerWidth);
-
+            // test
         });
-
 
     }]);

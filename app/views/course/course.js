@@ -19,6 +19,18 @@ angular.module('lionApp.course', ['ngRoute'])
             templateUrl: 'views/course/course.html',
             controller: 'CourseController'
         });
+
+        $routeProvider.when('/category/all', {
+            templateUrl: 'views/course/categories.html',
+            controller: 'AllCategoriesController'
+        });
+
+        $routeProvider.when('/category/:category', {
+            templateUrl: 'views/course/category.html',
+            controller: 'CategoryController'
+        });
+
+
     }])
 
     // Controller for the course page, injected services:
@@ -33,7 +45,7 @@ angular.module('lionApp.course', ['ngRoute'])
         // The complete URL for the request, &callback=JSON_CALLBACK is needed for JSONP
         var url = "http://gymlion.altervista.org/api/getCourse.php?" + courseParam + "&callback=JSON_CALLBACK";
 
-        // The $http service is a function which takes a single argument — a configuration object — that is used to
+        // The $http service is a function which takes a single argument ï¿½ a configuration object ï¿½ that is used to
         // generate an HTTP request and returns a promise with two $http specific methods: success and error.
         $http.jsonp(url).
             success(function(data) {
@@ -76,4 +88,52 @@ angular.module('lionApp.course', ['ngRoute'])
                 console.log("Error loading data from JSONP.")
             });
 
-    }]);
+    }])
+
+    .controller('CategoryController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
+
+        // The GET parameters for the JSONP request (with JSONP it is not possible to make POST request)
+        var catParam = "category=" + $routeParams.category;
+        // The complete URL for the request, &callback=JSON_CALLBACK is needed for JSONP
+        var url = "http://gymlion.altervista.org/api/getCategory.php?" + catParam + "&callback=JSON_CALLBACK";
+
+        $http.jsonp(url).
+            success(function(data) {
+
+                $scope.category = $routeParams.category;
+
+                // The data obtained via JSON
+                $scope.categoryData = data;
+
+                // Change the document title (plain JS, with Angular I would need to inject another service or a
+                // $rootScope)
+                document.title = "Lion Gym - Category - " + $routeParams.category;
+
+            }).
+            error(function(data, status, headers, config) {
+                $scope.error = true;
+                console.log("Error loading data from JSONP.")
+            });
+
+    }])
+
+    .controller('AllCategoriesController', ['$scope', '$http', function($scope, $http) {
+
+    var catParam = "category=all";
+    var url = "http://gymlion.altervista.org/api/getCategory.php?" + catParam + "&callback=JSON_CALLBACK";
+
+    $http.jsonp(url).
+        success(function(data) {
+
+            // The data obtained via JSON
+            $scope.categories = data;
+
+            document.title = "Lion Gym - All Categories";
+
+        }).
+        error(function(data, status, headers, config) {
+            $scope.error = true;
+            console.log("Error loading data from JSONP.")
+        });
+
+}]);

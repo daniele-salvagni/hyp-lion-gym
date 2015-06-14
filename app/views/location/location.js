@@ -12,6 +12,28 @@ angular.module('lionApp.location', ['ngRoute', 'ngMap'])
         // :name - All characters up to the next slash are matched and stored in $routeParams under the given name when
         // the route matches.
         $routeProvider.when('/location', {
-            templateUrl: 'views/location/location.html'
+            templateUrl: 'views/location/location.html',
+            controller: 'LocationController'
         });
+    }])
+
+
+    .controller('LocationController', ['$scope', '$http', function($scope, $http) {
+
+        var url = "http://gymlion.altervista.org/api/getContacts.php?callback=JSON_CALLBACK";
+
+        $http.jsonp(url).
+            success(function(data) {
+
+                // The data obtained via JSON
+                $scope.contacts = data[0];
+
+                document.title = "Lion Gym - Location";
+
+            }).
+            error(function(data, status, headers, config) {
+                $scope.error = true;
+                console.log("Error loading data from JSONP.")
+            });
+
     }]);

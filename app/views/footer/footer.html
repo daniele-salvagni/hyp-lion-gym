@@ -10,9 +10,44 @@
       </div>
       <!-- ~~~ Footer-NEWSLETTER ~~~ -->
       <div class="col-sm-4"><h4>Get updates</h4>
-        <small>Register to our <a href="#">newsletter</a> go receive news about our gym, new courses and promotions.
+        <small>Register to our <a href="" data-toggle="modal" data-target="#newsletterModal">newsletter</a> go receive news about our gym, new courses and promotions.
           You will also instantly receive a coupon valid for a free trial lesson!
         </small>
+
+        <!-- ~~~ Newsletter MODAL ~~~ -->
+        <div class="modal fade" id="newsletterModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Newsletter</h4>
+              </div>
+              <form>
+                <div class="modal-body">
+                  <label>Enter your email to subscribe to our newsletter:</label>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                      <input type="email" class="form-control" id="exampleInputAmount" placeholder="example@mail.com">
+                    </div>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="policy">
+                      Accept privacy <a href="">policy</a>
+                    </label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
       </div>
       <!-- ~~~ Footer-QUICKCONTACTS ~~~ -->
       <div class="col-sm-4"><h4>Get in touch</h4>

@@ -34,7 +34,7 @@ if ($category != "all") {
     // SINGLE CATEGORY
 
     // Get all the courses of the category
-    $sql = "SELECT `name`, `level`, `url` FROM `course` WHERE `category`='" . $category . "'";
+    $sql = "SELECT `name`, `level`, `url`, `category` FROM `course` WHERE `category`='" . $category . "'";
     $result = $conn->query($sql); // Execute
 
     if($result->num_rows > 0) {

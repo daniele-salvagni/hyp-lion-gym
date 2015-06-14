@@ -60,11 +60,11 @@
               <li><a>Equipment</a></li>
             </ul>
           </li>
-          <li class="dropdown" data-ng-class="{active: isActive('/course')}">
+          <li class="dropdown" data-ng-class="{active: isActive('/course') || isActive('/category')}">
             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Our
               Courses <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Categories</a></li>
+              <li><a href="#/category/all">Categories</a></li>
               <li><a href="#/course/all">All Courses</a></li>
             </ul>
           </li>

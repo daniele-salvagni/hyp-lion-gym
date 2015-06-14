@@ -1,4 +1,33 @@
 <!-- =============================================================================================================== -->
 <!-- =============================================== Daniele Salvagni - Hypermedia Applications (Web and Multimedia) -->
 
+<div class="container">
 
+  <div class="row">
+
+    <div class="col-xs-12 voffset3 text-xs-center text-sm-left">
+      <h1>Our Categories</h1>
+    </div>
+
+    <div class="col-xs-12 voffset3">
+      <p>We have all kinds of course categories for everyone at any level, every category contains a wide range of
+        courses taught by certified professionals.<br/>
+        If you need help finding the right course for you, you can ask our advisors and they will be happy to help
+        you in the process.</p>
+    </div>
+
+  </div>
+
+
+  <div class="row voffset3 row-centered">
+
+    <div class="col-sm-3 col-xs-6 col-centered" data-ng-repeat="category in categories">
+      <h3><span class="text-center center-block">{{ category.category }}</span></h3>
+      <a href="#/category/{{ category.category }}"><img
+          src="http://gymlion.altervista.org/img/cat/{{ category.category }}.png" class="img-responsive center-block"
+          alt="Award"></a>
+      <br/>
+    </div>
+
+  </div>
+</div>

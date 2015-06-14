@@ -6980,6 +6980,28 @@ body {
   line-height: 60px;
   font-weight: bold;
 }
+.success {
+  color: #44a95a;
+}
+.overlay {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-image: url('http://www.transparenttextures.com/patterns/subtle-dots.png');
+}
+.overlay-small {
+  color: #fff;
+  background: #999999 url('../img/bg.jpg') center;
+  background-size: cover;
+  padding: 35px;
+}
 .text-xs-left {
   text-align: left;
 }
