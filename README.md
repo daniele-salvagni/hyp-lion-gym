@@ -11,3 +11,5 @@ Working demo: http://daniele-salvagni.github.io/hyp-lion-gym/app/#/
 - Twitter [APIs](https://dev.twitter.com/rest/reference/get/statuses/user_timeline) are used to get the timeline of the instructors.
 - Google Maps [Javascript APIs](https://developers.google.com/maps/documentation/javascript/) and AngularJS [ng-map](http://ngmap.github.io/) module are used to get [custom themed](https://developers.google.com/maps/documentation/javascript/styling) the map of the gym location.
 - [jQuery](https://jquery.com/) is used to dinamically change the header aspect based on the position of the page (and by some Bootstrap components like Carousel)
+
+Note: some things are different on mobile/desktop (for example the home page video is not loaded on mobile to save resources)
