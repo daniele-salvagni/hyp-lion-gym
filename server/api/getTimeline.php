@@ -7,10 +7,10 @@ header("content-type:text/javascript");
 require "twitteroauth/autoload.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
 
-$consumer_key = "le1k1C7c6dcJTyc555kaI8fDl";
-$consumer_secret = "fo64ppCBjoAvrolV4CTtjwpp5fTHkZmKZV8IvL9k8CGVPUy0v5";
-$access_token = "2361653521-3beGNGaiKMcajUoyL8pWiD3ykbQrt1WgGdN3Sc4";
-$access_token_secret = "1tRZcRFA2OaOnf3tVSeXXUinSs27xa3V19lF1cW6fFAvY";
+$consumer_key = "xxxxxxxxxxxxxxx";
+$consumer_secret = "xxxxxxxxxxxxxxx";
+$access_token = "xxxxxxxxxxxxxxx";
+$access_token_secret = "xxxxxxxxxxxxxxx";
 
 
 // Check that the user argument is present
