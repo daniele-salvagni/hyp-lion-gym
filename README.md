@@ -2,7 +2,7 @@
 #### Hypermedia Applications Project (Part two) - 2015
 ##### Computer Engineering - Politecnico di Milano
 
-Project rincluded to retrieve all the data asyncronously from an extrnal PHP server.   
+Project requirements included to retrieve all the data asyncronously from an extrnal PHP server.   
 Working demo: http://daniele-salvagni.github.io/hyp-lion-gym/app/#/
 
 
