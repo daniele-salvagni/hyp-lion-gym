@@ -1,5 +1,6 @@
 # Lion Gym
 #### Hypermedia Applications Project - 2015
+##### Computer Engineering - Politecnico di Milano
 
 Project requerements were to retrieve all the data asyncronously from an extrnal PHP server.   
 Working demo: http://daniele-salvagni.github.io/hyp-lion-gym/app/#/
