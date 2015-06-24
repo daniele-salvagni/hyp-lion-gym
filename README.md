@@ -5,7 +5,7 @@ Project requerements were to retrieve all the data asyncronously from an extrnal
 Working demo: http://daniele-salvagni.github.io/hyp-lion-gym/app/#/
 
 
-## Informations
+## Information
 
 - CSS is written in [LESS](http://lesscss.org/) on top of [Bootstrap](http://getbootstrap.com/), the site template has been created manually from scratch and it is fully responsive.
 - The website is a "single page" app, only the parts of the page that changes are loaded asynchronously from another server using [AngularJS](https://angularjs.org/).
@@ -15,7 +15,7 @@ Working demo: http://daniele-salvagni.github.io/hyp-lion-gym/app/#/
 
 Note: some things are different on mobile/desktop (for example the home page video is not loaded on mobile to save resources)
 
-### Screenshot
+### Screenshots
 
 ![HomePage](http://i.imgur.com/sQ55YRw.png)
 
