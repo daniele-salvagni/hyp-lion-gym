@@ -17,4 +17,6 @@ Note: some things are different on mobile/desktop (for example the home page vid
 
 ### Screenshot
 
-![Screenshot](http://i.imgur.com/sQ55YRw.png)
+![HomePage](http://i.imgur.com/sQ55YRw.png)
+
+![CoursePage](http://i.imgur.com/HPC64tr.png)
