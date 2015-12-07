@@ -19,8 +19,6 @@ Note: there are some differences on mobile/desktop (for example the home page vi
 
 ### Screenshots
 
-![HomePage](https://github.com/daniele-salvagni/hyp-lion-gym/blob/master/screenshot1.png)
-
 ![Animation](https://github.com/daniele-salvagni/hyp-lion-gym/blob/master/screenvid.gif)
 
 ![CoursePage](https://github.com/daniele-salvagni/hyp-lion-gym/blob/master/screenshot2.png)
