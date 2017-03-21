@@ -2,9 +2,9 @@
 #### Hypermedia Applications Project (Part two) - 2015
 ##### Computer Engineering - Politecnico di Milano
 
-This is the second part of an Hypermedia Applications project, the objective was to implement a fully responsive website from the IDM Interactive Dialogue Models redacted in the first part. The project requirements included to **retrieve all the data asyncronously** from an external server with a PHP and MySQL backend.
+This is the second part of the Hypermedia Applications course project, the objective was to implement a fully responsive website from the IDM Interactive Dialogue Models redacted in the first part with some specific technology requirements. The project requirements included to **retrieve all the data asyncronously** from an external server with a PHP and MySQL backend.
 
-Working demo: http://daniele-salvagni.github.io/hyp-lion-gym/app/#/ (data may not be available forever)
+Working demo: http://daniele-salvagni.github.io/hyp-lion-gym/app/#/ - The database is no longer online, so most of the data will not load anymore.
 
 ## Information
 
