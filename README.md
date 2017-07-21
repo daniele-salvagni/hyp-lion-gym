@@ -1,5 +1,6 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/6751621/28461252-0fc6e73e-6e16-11e7-87a7-2277b3765efa.png"></p>
 
+-----
 
 ### Lion Gym - Hypermedia Applications Project (Part two) - 2015
 #### Computer Engineering - Politecnico di Milano
